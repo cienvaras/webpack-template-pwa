@@ -16,7 +16,7 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
@@ -24,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
